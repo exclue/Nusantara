@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Playfair Display', 'Cinzel', serif;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    background-color: #FAF7F2;
+    color: #2D211B;
+  }
+  
+  body {
+    font-family: var(--font-sans);
+    background-color: #FAF7F2;
+    color: #2D211B;
+    overflow-x: hidden;
+  }
+}
+
+.font-serif-title {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-sans-ui {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Custom Sepia Vintage Image Filter matching reference screenshot tone */
+.sepia-card-filter {
+  filter: sepia(0.35) contrast(1.08) brightness(0.92) saturate(0.85);
+  transition: all 0.5s ease;
+}
+
+.sepia-card-filter:hover {
+  filter: sepia(0.15) contrast(1.1) brightness(0.98) saturate(0.95);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #D8CEBE;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A89987;
+}
+
+/* Hide horizontal scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
